@@ -1,8 +1,8 @@
 #Looping for ordinal numbers
 
-ordinal_list = [x for x in range(1,10)]
+ordinal_list = [x for x in range(1,10)] #List comprehension
 
-for number in ordinal_list:
+for number in ordinal_list: #Looping through the list to print numbers
     if number == 1:
         print('1st')
     elif number == 2:
