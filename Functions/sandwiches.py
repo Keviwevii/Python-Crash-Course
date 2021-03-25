@@ -13,10 +13,6 @@ import sandwich as sw
 from sandwich import *
 
 
-
-
-
-
 sandwich.make_sandwich('potatoes', 'skittles')
 sandwich.make_sandwich('chocolate', 'peanut butter')
 sandwich.make_sandwich('idk', 'horseradish', 'condiments')
