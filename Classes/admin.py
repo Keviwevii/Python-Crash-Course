@@ -1,4 +1,4 @@
-#Modifying our User class
+#Using inheritance on our User class
 
 class User:
     
@@ -28,14 +28,19 @@ Weight: {self.weight}'''
     def reset_login_attempts(self):
         '''Resets login attempts'''
         self.login_attempts = 0
+ 
+#Using inheritance to make a admin class        
+class Admin(User):
+    
+    def __init__(self, first_name, last_name, age, weight):
+        '''Initialize parent attributes'''
+        super().__init__(first_name,last_name,age,weight)
+        self.privileges = ['can add post', 'can delete post', 'can ban user']
         
-#Create an instance and test login attempt methods
-kevin = User('Kevin', 'Floyd', 25, 151)
-kevin.describe_person()
-kevin.increment_login_attempts()
-kevin.increment_login_attempts()
-kevin.increment_login_attempts()
-kevin.increment_login_attempts()
-print(f'Login attempts: {kevin.login_attempts}')
-kevin.reset_login_attempts()
-print(f'Login attempts: {kevin.login_attempts}')
+    def show_privileges(self):
+        print('As an admin you have the following privileges: ')
+        for privileges in self.privileges:
+            print(privileges.upper())
+            
+new_admin = Admin('Janet', 'Jackson', 24, 130)
+new_admin.show_privileges()
