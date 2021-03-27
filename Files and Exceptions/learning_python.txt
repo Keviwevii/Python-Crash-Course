@@ -1,0 +1,3 @@
+In Python you can use indentation with functions.
+In Python you can loop through lists, dictionaries and tuples
+In Python you can analyze data as well as make games with PyGame.
